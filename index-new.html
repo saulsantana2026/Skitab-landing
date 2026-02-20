@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyTab POS - Sistema #1 para Restaurantes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#003d7a',
+                        secondary: '#002855',
+                        accent: '#0066cc',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-900">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-[#003d7a]">SkyTab</span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#features" class="text-gray-700 hover:text-[#003d7a] transition" data-i18n="nav-features">Características</a>
+                    <a href="#benefits" class="text-gray-700 hover:text-[#003d7a] transition" data-i18n="nav-benefits">Beneficios</a>
+                    <a href="#hardware" class="text-gray-700 hover:text-[#003d7a] transition" data-i18n="nav-hardware">Hardware</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-[#003d7a] transition" data-i18n="nav-pricing">Precio</a>
+                    <a href="tel:+17202814899" class="text-[#003d7a] font-semibold hover:text-[#002855] transition">📞 (720) 281-4899</a>
+                    <a href="#contact" class="bg-[#003d7a] text-white px-6 py-2 rounded-full hover:bg-[#002855] transition shadow-md" data-i18n="nav-contact">Contacto</a>
+                    <button onclick="toggleLanguage()" class="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full transition">
+                        <span id="current-lang" class="font-semibold">🇺🇸 EN</span>
+                    </button>
+                </div>
+                <button class="md:hidden text-gray-700" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#features" class="block text-gray-700 hover:text-[#003d7a]" data-i18n="nav-features">Características</a>
+                <a href="#benefits" class="block text-gray-700 hover:text-[#003d7a]" data-i18n="nav-benefits">Beneficios</a>
+                <a href="#hardware" class="block text-gray-700 hover:text-[#003d7a]" data-i18n="nav-hardware">Hardware</a>
+                <a href="#pricing" class="block text-gray-700 hover:text-[#003d7a]" data-i18n="nav-pricing">Precio</a>
+                <a href="tel:+17202814899" class="block text-[#003d7a] font-semibold text-center py-2">📞 (720) 281-4899</a>
+                <a href="https://wa.me/17202814899" target="_blank" class="block bg-green-500 text-white px-6 py-2 rounded-full text-center hover:bg-green-600">💬 WhatsApp</a>
+                <a href="#contact" class="block bg-[#003d7a] text-white px-6 py-2 rounded-full text-center hover:bg-[#002855]" data-i18n="nav-contact">Contacto</a>
+                <button onclick="toggleLanguage()" class="w-full px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full transition font-semibold">
+                    <span>🇺🇸 EN / 🇪🇸 ES</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Modern -->
+    <section class="relative pt-24 pb-16 px-4 overflow-hidden bg-gradient-to-br from-[#001f3f] via-[#003d7a] to-[#002855]">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left: Content -->
+                <div class="text-white fade-in-up z-10">
+                    <div class="inline-block bg-cyan-500/20 text-cyan-300 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                        <span data-i18n="hero-badge">✨ Sistema POS #1 en Denver</span>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                        <span data-i18n="hero-title1">Sistema POS Completo</span><br/>
+                        <span class="text-cyan-300" data-i18n="hero-title2">Sin Comisiones.</span>
+                    </h1>
+                    <p class="text-xl mb-8 text-blue-100 leading-relaxed" data-i18n="hero-subtitle">
+                        Todo lo que necesitas para manejar tu restaurante o bar: POS, pagos, inventario, reportes y más. Todo incluido.
+                    </p>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="bg-white/10 backdrop-blur-sm px-4 py-4 rounded-xl text-center border border-white/20">
+                            <p class="text-4xl font-bold mb-1">$0</p>
+                            <p class="text-sm opacity-80" data-i18n="hero-stat1">Costo Inicial</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm px-4 py-4 rounded-xl text-center border border-white/20">
+                            <p class="text-4xl font-bold mb-1">0%</p>
+                            <p class="text-sm opacity-80" data-i18n="hero-stat2">Comisión</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm px-4 py-4 rounded-xl text-center border border-white/20">
+                            <p class="text-4xl font-bold mb-1">24/7</p>
+                            <p class="text-sm opacity-80" data-i18n="hero-stat3">Soporte</p>
+                        </div>
+                    </div>
+                    
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="inline-block bg-white text-[#003d7a] px-8 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transition shadow-lg text-center transform hover:scale-105" data-i18n="hero-cta1">
+                            Solicitar Demo Gratis
+                        </a>
+                        <a href="tel:+17202814899" class="inline-block bg-cyan-500 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-cyan-600 transition shadow-lg text-center transform hover:scale-105">
+                            📞 (720) 281-4899
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right: Image -->
+                <div class="relative">
+                    <div class="relative z-10 float-animation">
+                        <img src="images/pos-devices.png" alt="SkyTab POS System" class="w-full drop-shadow-2xl">
+                    </div>
+                    <!-- Glow effect -->
+                    <div class="absolute inset-0 bg-cyan-500/30 blur-3xl rounded-full transform scale-75"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative elements -->
+        <div class="absolute top-10 right-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 left-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="py-8 bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-wrap justify-center items-center gap-8 text-center">
+                <div>
+                    <p class="text-3xl font-bold text-[#003d7a]">1,000+</p>
+                    <p class="text-sm text-gray-600" data-i18n="trust1">Restaurantes Confían en SkyTab</p>
+                </div>
+                <div class="h-12 w-px bg-gray-300 hidden md:block"></div>
+                <div>
+                    <p class="text-3xl font-bold text-[#003d7a]">4.9/5</p>
+                    <p class="text-sm text-gray-600" data-i18n="trust2">Calificación de Clientes</p>
+                </div>
+                <div class="h-12 w-px bg-gray-300 hidden md:block"></div>
+                <div>
+                    <p class="text-3xl font-bold text-[#003d7a]">$5,000</p>
+                    <p class="text-sm text-gray-600" data-i18n="trust3">Bono de Cambio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Continue with rest of sections... -->
+    
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+
+        // Language toggle (placeholder)
+        function toggleLanguage() {
+            const currentLang = document.getElementById('current-lang');
+            if (currentLang.textContent.includes('EN')) {
+                currentLang.textContent = '🇪🇸 ES';
+                // Switch to Spanish
+            } else {
+                currentLang.textContent = '🇺🇸 EN';
+                // Switch to English
+            }
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    document.getElementById('mobileMenu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -83,64 +83,39 @@
         </div>
     </nav>
 
-    <!-- Hero Section - Modern Layout -->
-    <section class="relative pt-24 pb-16 px-4 overflow-hidden bg-gradient-to-br from-[#001f3f] via-[#003d7a] to-[#002855]">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <!-- Left: Content -->
-                <div class="text-white fade-in-up z-10">
-                    <div class="inline-block bg-cyan-500/20 text-cyan-300 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                        <span data-i18n="hero-badge">✨ Sistema POS #1 en Denver</span>
-                    </div>
-                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                        <span data-i18n="hero-title1">Sistema POS Completo</span><br/>
-                        <span class="text-cyan-300" data-i18n="hero-title2">Sin Comisiones.</span>
-                    </h1>
-                    <p class="text-xl mb-8 text-blue-100 leading-relaxed" data-i18n="hero-subtitle">
-                        Todo lo que necesitas para manejar tu restaurante o bar: POS, pagos, inventario, reportes y más. Todo incluido.
-                    </p>
-                    
-                    <!-- Stats -->
-                    <div class="grid grid-cols-3 gap-4 mb-8">
-                        <div class="bg-white/10 backdrop-blur-sm px-4 py-4 rounded-xl text-center border border-white/20">
-                            <p class="text-3xl font-bold mb-1">$0</p>
-                            <p class="text-xs opacity-80" data-i18n="hero-stat1">Costo Inicial</p>
-                        </div>
-                        <div class="bg-white/10 backdrop-blur-sm px-4 py-4 rounded-xl text-center border border-white/20">
-                            <p class="text-3xl font-bold mb-1">$29/<span class="text-sm">mes</span></p>
-                            <p class="text-xs opacity-80" data-i18n="hero-stat2">Por Estación</p>
-                        </div>
-                        <div class="bg-white/10 backdrop-blur-sm px-4 py-4 rounded-xl text-center border border-white/20">
-                            <p class="text-3xl font-bold mb-1">24/7</p>
-                            <p class="text-xs opacity-80" data-i18n="hero-stat3">Soporte</p>
-                        </div>
-                    </div>
-                    
-                    <!-- CTAs -->
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#contact" class="inline-block bg-white text-[#003d7a] px-8 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transition shadow-xl text-center transform hover:scale-105" data-i18n="hero-cta1">
-                            Solicitar Demo Gratis
-                        </a>
-                        <a href="tel:+17202814899" class="inline-block bg-cyan-500 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-cyan-600 transition shadow-xl text-center transform hover:scale-105">
-                            📞 (720) 281-4899
-                        </a>
-                    </div>
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto text-center fade-in-up">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                <span data-i18n="hero-title1">Sistema POS #1</span><br/>
+                <span class="text-cyan-300" data-i18n="hero-title2">0% de Comisión</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-blue-100" data-i18n="hero-subtitle">
+                Diseñado específicamente para Bares y Restaurantes
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                <div class="bg-white/10 backdrop-blur-sm px-6 py-4 rounded-lg">
+                    <p class="text-3xl font-bold">$0</p>
+                    <p class="text-sm" data-i18n="hero-price1">Costo Inicial</p>
                 </div>
-                
-                <!-- Right: Image -->
-                <div class="relative lg:block hidden">
-                    <div class="relative z-10 transform hover:scale-105 transition duration-700">
-                        <img src="images/pos-devices.png" alt="SkyTab POS System" class="w-full drop-shadow-2xl">
-                    </div>
-                    <!-- Glow effect -->
-                    <div class="absolute inset-0 bg-cyan-500/20 blur-3xl rounded-full"></div>
+                <div class="bg-white/10 backdrop-blur-sm px-6 py-4 rounded-lg">
+                    <p class="text-3xl font-bold">$29.99/<span data-i18n="month-short">mes</span></p>
+                    <p class="text-sm" data-i18n="hero-price2">Por Estación</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm px-6 py-4 rounded-lg">
+                    <p class="text-3xl font-bold">$5,000</p>
+                    <p class="text-sm" data-i18n="hero-price3">Bono de Cambio</p>
                 </div>
             </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#contact" class="inline-block bg-cyan-400 text-blue-900 px-8 py-4 rounded-full text-lg font-bold hover:bg-cyan-300 transition transform hover:scale-105 shadow-lg shadow-cyan-500/50" data-i18n="hero-cta">
+                    Comienza Gratis - 30 Días de Prueba
+                </a>
+                <a href="https://wa.me/17202814899" target="_blank" class="inline-block bg-green-500 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-green-600 transition transform hover:scale-105 shadow-lg">
+                    💬 WhatsApp: (720) 281-4899
+                </a>
+            </div>
         </div>
-        
-        <!-- Decorative elements -->
-        <div class="absolute top-10 right-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-10 left-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
     </section>
 
     <!-- Benefits Section -->
@@ -227,7 +202,7 @@
                 <!-- POS Terminal -->
                 <div class="bg-gray-50 rounded-xl p-6 hover:shadow-xl transition">
                     <div class="rounded-lg h-48 flex items-center justify-center mb-4 overflow-hidden">
-                        <img src="images/shift4-hardware.png" alt="SkyTab POS Terminal" class="w-full h-full object-contain">
+                        <img src="images/pos-terminal.png" alt="SkyTab POS Terminal" class="w-full h-full object-contain">
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-[#001f3f]" data-i18n="hardware1-name">Terminal POS SkyTab</h3>
                     <p class="text-gray-600 mb-4" data-i18n="hardware1-desc">Terminal táctil de alta resistencia con pantalla brillante, procesador rápido y diseño elegante. Perfecto para cualquier estación de pago.</p>
@@ -242,7 +217,7 @@
                 <!-- Handheld Device -->
                 <div class="bg-gray-50 rounded-xl p-6 hover:shadow-xl transition">
                     <div class="rounded-lg h-48 flex items-center justify-center mb-4 overflow-hidden">
-                        <img src="images/terminal-tip.png" alt="SkyTab Handheld Device" class="w-full h-full object-contain">
+                        <img src="images/handheld-device.png" alt="SkyTab Handheld Device" class="w-full h-full object-contain">
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-[#001f3f]" data-i18n="hardware2-name">Dispositivo Móvil</h3>
                     <p class="text-gray-600 mb-4" data-i18n="hardware2-desc">Toma pedidos y acepta pagos en cualquier lugar del restaurante. Aumenta la eficiencia y mejora la experiencia del cliente.</p>
